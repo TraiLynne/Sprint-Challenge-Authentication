@@ -29,20 +29,32 @@ Implement an User Authentication System in order to access the jokes from the Jo
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 1. What is the purpose of using _sessions_?
+
+    Sessions are the state of the stateless HTTP. They allow data to be passed between HTTP requests.
+
 1. What does bcrypt do to help us store passwords in a secure manner.
+    
+    BCryptJS completely changes the password provided by the user before persisting the new users records to the database. To change the password, it passes the password provided by the user to a hashing algorithm and adds a little salt to the password before storing it to the database.
+
 1. What does bcrypt do to slow down attackers?
+
+    BCryptJS is a JavaScript library that uses hashing, salting, and rounds to securely store the passwords in order to slow down attackers. The library takes the original password and inserts it into a pure function. Meaning that given the same input(s), the output will never change for that function. This function will hash the password to change the characters then add a little salt to make it a little long. It then does this multiple times depending on the number of rounds defined.
+    In order for an attacker to get the original password, they would need to know the specfic hashing & salting algorithm & the number of rounds used.
+
 1. What are the three parts of the JSON Web Token?
+    
+    The 3 parts of the JSON Web Token are the header, the payload, and the signature.
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on this Branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [x] Create a forked copy of this project.
+- [x] Add PM as collaborator on Github.
+- [x] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [x] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [x] Implement the project on this Branch, committing changes regularly.
+- [x] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project:
 
@@ -58,13 +70,13 @@ Helpful Tip on Testing this Project:
 
 ## Minimum Viable Product
 
-- [ ] Implement the `register` function inside `/config/routes.js`.
-- [ ] Implement the `login` function inside `/config/routes.js`.
-- [ ] Use JSON Web Tokens for authentication.
+- [x] Implement the `register` function inside `/config/routes.js`.
+- [x] Implement the `login` function inside `/config/routes.js`.
+- [x] Use JSON Web Tokens for authentication.
 
 **Note** The migrations and a database with empty users is already included
 
-- [ ] Add the authentication related code. If every is done correctly, visiting `/api/jokes` should return a list of jokes.
+- [x] Add the authentication related code. If every is done correctly, visiting `/api/jokes` should return a list of jokes.
 
 ## Stretch Problem: Build a front end to interface with your User Auth System
 
