@@ -30,11 +30,11 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 1. What is the purpose of using _sessions_?
 
-    Sessions are the state of the stateless HTTP. They allow data to be passed between HTTP requests 
+    Sessions are the state of the stateless HTTP. They allow data to be passed between HTTP requests.
 
 1. What does bcrypt do to help us store passwords in a secure manner.
     
-    BCryptJS completely changes the password provided by the user before persisting the new users records to the database.
+    BCryptJS completely changes the password provided by the user before persisting the new users records to the database. To change the password, it passes the password provided by the user to a hashing algorithm and adds a little salt to the password before storing it to the database.
 
 1. What does bcrypt do to slow down attackers?
 
